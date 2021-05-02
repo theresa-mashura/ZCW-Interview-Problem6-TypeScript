@@ -9,10 +9,11 @@ import { TimePickerComponent } from './time-picker/time-picker.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button/';
 
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -26,7 +27,9 @@ import { MatSelectModule } from '@angular/material/select';
     NgbModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonModule, 
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
