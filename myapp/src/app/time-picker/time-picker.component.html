@@ -3,14 +3,25 @@
 
 <mat-form-field appearance="fill">
     <mat-label>Hour</mat-label>
-    <mat-select>
+    <mat-select [(value)]="selectedHour">
+        <mat-option>None</mat-option>
         <mat-option *ngFor="let hour of hours" [value]="hour"> {{hour | number:'2.0'}} </mat-option>
     </mat-select>
 </mat-form-field>
 
 <mat-form-field appearance="fill">
     <mat-label>Minutes</mat-label>
-    <mat-select>
+    <mat-select [(value)]="selectedMinute">
         <mat-option *ngFor="let minute of minutes" [value]="minute"> {{minute | number:'2.0'}} </mat-option>
     </mat-select>
 </mat-form-field>
+
+<mat-form-field appearance="fill">
+    <mat-label>Meridiem</mat-label>
+    <mat-select [(value)]="selectedMeridiem">
+        <mat-option *ngFor="let meridiem of meridiem" [value]="meridiem.value"> {{meridiem.view}} </mat-option>
+    </mat-select>
+</mat-form-field>
+
+<button (click)="getBootcampTime()">Get Bootcamp Time</button>
+<!-- <div class="militaryTime">{{militaryTime}}</div> -->
