@@ -1,0 +1,16 @@
+
+
+
+<mat-form-field appearance="fill">
+    <mat-label>Hour</mat-label>
+    <mat-select>
+        <mat-option *ngFor="let hour of hours" [value]="hour"> {{hour | number:'2.0'}} </mat-option>
+    </mat-select>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+    <mat-label>Minutes</mat-label>
+    <mat-select>
+        <mat-option *ngFor="let minute of minutes" [value]="minute"> {{minute | number:'2.0'}} </mat-option>
+    </mat-select>
+</mat-form-field>
